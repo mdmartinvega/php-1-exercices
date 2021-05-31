@@ -1,0 +1,13 @@
+{
+    "name": "loli/php-1-exercices",
+    "authors": [
+        {
+            "name": "mdmartinvega",
+            "email": "mdmartinvega@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
