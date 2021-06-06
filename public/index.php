@@ -34,11 +34,10 @@ print_r($var6."<br>"."<br>");
     <h1>Hola, Loli</h1>
     <p>Hoy es <strong>
     <?php
-
-        $today = getdate();
-        echo $today['weekday'];
-         
-         
+        setlocale(LC_ALL, 'esp_esp');
+        echo strftime("%A");
+        // $today = getdate();
+        // echo $today['weekday'];  
     ?>
          </strong>¿Qué tal estás?</p>
 </body>

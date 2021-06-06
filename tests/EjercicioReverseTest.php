@@ -10,8 +10,8 @@ final class EjercicioReverseTest extends TestCase
   // Programar varias funciones que realizen lo siguiente
   public function testReverseString(): void
   {
-    $input = "Hola qué tal";
-    $expectedOutput = "lat éuq aloH";
+    $input = "Hola que tal";
+    $expectedOutput = "lat euq aloH";
     assertEquals($expectedOutput, reverseString($input));
   }
 
