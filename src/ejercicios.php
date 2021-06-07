@@ -51,33 +51,56 @@ function averageAge (array $datas): float {
 
 // ----------ReverseTest---------------
 
-function reverseString(string $sentence): string {
-    $stringReverse = "";
-    for ($index=mb_strlen($sentence)-1; $index >= 0 ; $index--) { 
-        $stringReverse .= $sentence[$index];
-    }
-    return $stringReverse;
+function reverseString (string $string): string {
+    $chars = mb_str_split($string);
+    $chars = array_reverse($chars);
+    $string = implode(" ", $chars);
+    return $string;
 }
 
-function reverseWords(string $sentence): string {
-    $stringReverse = "";
-    $sentence = explode(" ", $sentence);
-    foreach($sentence as $word) {
-        $stringReverse = array_reverse($sentence);
-        $stringReverse .= implode($sentence);
-    }
-    return $stringReverse;
-}
-    
+// function reverseString(string $sentence): string {
+//     $stringReverse = "";
+//     for ($index=mb_strlen($sentence)-1; $index >= 0 ; $index--) { 
+//         $stringReverse .= $sentence[$index];
+//     }
+//     return $stringReverse;
+// }
 
-function reverseCharactersInWords(string $sentence): string {
-    $stringReverse = "";
-    $sentence = explode(" ", $sentence);
-    foreach($sentence as $word) {
-        for ($index=mb_strlen($word)-1; $index >= 0 ; $index--) { 
-            $stringReverse .= implode($word[$index]);
-        }
+function reverseWords(string $string): string {
+    $words = explode(" ", $string);
 
-    }
-    return $stringReverse;
+    return implode(" ", array_reverse($words));
 }
+
+
+// function reverseWords(string $sentence): string {
+//     $stringReverse = "";
+//     $sentence = explode(" ", $sentence); // -> array ['hola', 'que', 'tal']
+//     $sentence = array_reverse($sentence); // ->girar array ['tal', 'que', 'hola']
+//     foreach($sentence as $word) { // recorre el array
+//         $stringReverse .= $word." ";
+//     }
+//     return $stringReverse;
+// }
+   
+
+// function reverseCharactersInWords($input) {
+//     $words = explode(" ", $input);
+//     $reversedArray = [];
+//     foreach($words as $word) {
+//         $reversedArray = [reverseString($word)];
+//     }
+//     return $reverseString = implode(" ", $reversedArray);
+     
+// }
+
+// function reverseCharactersInWords(string $sentence): string {
+//     $stringReverse = "";
+//     $sentence = explode(" ", $sentence);
+//     foreach($sentence as $word) {
+//         for ($index=mb_strlen($word)-1; $index >= 0 ; $index--) { 
+//             $stringReverse .= $word[$index]." ";
+//         }
+//     }
+//     return $stringReverse;
+// }

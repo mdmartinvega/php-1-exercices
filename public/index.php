@@ -24,21 +24,35 @@ print_r($var6."<br>"."<br>");
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<?php include("./partial/head.php")?>
+
 <body>
+    <?php
+        include("./menu.php");
+    ?>
+    
     <h1>Hola, Loli</h1>
     <p>Hoy es <strong>
-    <?php
-        setlocale(LC_ALL, 'esp_esp');
-        echo strftime("%A");
-        // $today = getdate();
-        // echo $today['weekday'];  
-    ?>
-         </strong>¿Qué tal estás?</p>
+        <?php
+            setlocale(LC_ALL, 'esp_esp');
+            echo strftime("%A");
+            // $today = getdate();
+            // echo $today['weekday'];  
+
+            $weeekDays = [
+                1 => 'lunes',
+                2 => 'martes',
+                3 => 'miércoles',
+                4 => 'jueves',
+                5 => 'viernes',
+                6 => 'sábado',
+                7 => 'domingo',
+            ];
+        ?>
+    </strong>¿Qué tal estás?</p>
+    <h1>Hola, <?= $_GET["name"];?></h1>
+    <p>Hoy es <strong><?= $weeekDays[date('N')]; ?></strong>. ¿Qué tal estás?</p>
+    
+    <script src="./assets//main.js"></script>
 </body>
 </html>
