@@ -53,6 +53,6 @@ print_r($var6."<br>"."<br>");
     <h1>Hola, <?= $_GET["name"];?></h1>
     <p>Hoy es <strong><?= $weeekDays[date('N')]; ?></strong>. ¿Qué tal estás?</p>
     
-    <script src="./assets//main.js"></script>
+    <script src="./assets/main.js"></script>
 </body>
 </html>

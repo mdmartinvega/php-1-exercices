@@ -8,6 +8,7 @@
     // : 'SELECT * FROM employees';
     //POdríamos utilizar otros parámetros como email, name, etc con un condicional if/elseif
 
+    //Esta query es para el listado
     $query = 'SELECT * FROM employees';
     if (isset($_GET['id'])) {
         $query = 'SELECT * FROM employees WHERE id = :identifiador';
