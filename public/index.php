@@ -21,6 +21,9 @@ print_r($var4."<br>"."<br>");
 print_r($var5."<br>"."<br>");
 print_r($var6."<br>"."<br>"); 
 -->
+<?php 
+
+require $_SERVER['DOCUMENT_ROOT'] . '/lib/session.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
