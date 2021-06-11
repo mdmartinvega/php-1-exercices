@@ -33,6 +33,11 @@ require $_SERVER['DOCUMENT_ROOT'] . '/lib/session.php'; ?>
     <?php
         include("./menu.php");
     ?>
+    <?php if($_SESSION['last_visit_time']):?>
+    <h4><?= $_SESSION['last_visit_time']; ?></h4>
+    <?php endif; ?>
+    <?php setcookie('phpexercice', time()); ?>
+    <pre>$_COOKIE: <?php print_r($_COOKIE); ?></pre>
     
     <h1>Hola, Loli</h1>
     <p>Hoy es <strong>
